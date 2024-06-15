@@ -6,6 +6,18 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# ignore dist directory
+dist
+
+# Ignore all .toml files
+*.toml
+
+data.csv
+# Ignnore .csv files
+*.csv
+
+# Ignore .wrangler dir
+.wrangler
 # Dependency directories
 node_modules/
 jspm_packages/
