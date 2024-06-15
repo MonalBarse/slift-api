@@ -17,7 +17,9 @@ To utilize the Slift API, send a POST request to the hosted endpoint.
 
 ### Endpoint
 
-[Button with green background](https://slift-api.monalbarse.workers.dev/)
+```
+https://slift-api.monalbarse.workers.dev/
+```
 
 ### Request payload
 
