@@ -1,5 +1,25 @@
 import fs from "fs";
 import csv from "csv-parser";
+import { Index } from "@upstash/vector";
+
+import dotenv from "dotenv";
+
+// Load environment variables from .env file
+dotenv.config();
+
+const { VECTOR_URL, VECTOR_TOKEN } = process.env;
+
+if (!VECTOR_URL || !VECTOR_TOKEN) {
+  throw new Error(
+    "VECTOR_URL and VECTOR_TOKEN must be set in environment variables",
+  );
+}
+
+const index = new Index({
+  // Create a new instance of the Index class which will be used to interact with the database (Upstash) (index.query, index.upsert, index.delete, etc.)
+  url: VECTOR_URL,
+  token: VECTOR_TOKEN,
+});
 
 interface Row {
   text: string;
@@ -36,7 +56,7 @@ const seed = async () => {
         metadata: { text: row.text },
       };
     });
-    console.log(`Inserting blob with ${dataBlob.length} rows`, dataBlob);
+    await index.upsert(dataBlob);
   }
 };
 
