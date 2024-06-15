@@ -12,9 +12,10 @@ dist
 # Ignore all .toml files
 *.toml
 
-data.csv
 # Ignnore .csv files
 *.csv
+# Ignore data.csv file
+data.csv
 
 # Ignore .wrangler dir
 .wrangler
