@@ -17,8 +17,8 @@ To utilize the Slift API, send a POST request to the hosted endpoint.
 
 ### Endpoint
 
-```http
-    https://api.slift.io/v1/analyze
+```
+https://slift-api.monalbarse.workers.dev/
 ```
 
 ### Request payload
@@ -31,7 +31,7 @@ To utilize the Slift API, send a POST request to the hosted endpoint.
 
 - The response will be in the following format
 
-```json
+```js
 {
     "isProfane": true | false,  // true if the message contains a profane word
     "score": (between 0 and 1), // 1 meaning that message had a profane word
