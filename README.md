@@ -11,16 +11,17 @@ Slift API offers a powerful text analysis service that swiftly identifies inappr
 
 ## Tech Stack
 
-- **Backend:** Developed using Node.js and Express.js to handle server-side logic.
-- **Database:** MongoDB serves as the database for storing analysis results and user data (if needed).
-- **API Integration:** Easily integrates with any application via RESTful API endpoints.
+- **Backend:** HonoJs for advanced text analysis capabilities
+- **Database:** Upstash-Vector (Vector Database) for efficient data storage and retrieval
+- **Deployment:** Cloudflare for scalable and efficient API hosting
+
 
 ## Getting Started
 
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/MonalBarse/slift-api.git
+   git clone https://github.com/MonalBarse/slift-api
    ```
 
 2. **Install Dependencies:**
